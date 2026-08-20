@@ -1,0 +1,29 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: my-postgres01
+    environment:
+      POSTGRES_DB: Learning2026
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sabzar
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: my-springboot-app01
+    ports:
+      - "8088:8088"
+    environment:
+     # SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mydb
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Learning2026
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: sabzar
+    depends_on:
+      - postgres
+
+volumes:
+  postgres-data:
