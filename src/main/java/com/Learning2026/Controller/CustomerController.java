@@ -51,4 +51,9 @@ public class CustomerController {
     public String Check(){
         return "Welcome To Pahalgam";
     }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello CI/CD";
+    }
 }
