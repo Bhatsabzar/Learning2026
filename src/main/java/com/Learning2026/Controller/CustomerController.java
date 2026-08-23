@@ -52,18 +52,12 @@ public class CustomerController {
         return "Welcome To Pahalgam";
     }
 
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello CI/CD";
+
+    @GetMapping("/app")
+    public String CheckMyApplication(){
+
+        return "Welcome To my new deployed Application";
     }
 
-    @GetMapping("/hello2")
-    public String hello2() {
-        return "Hello CI/CD 02 world";
-    }
 
-    @GetMapping("/hello3")
-    public String hello3() {
-        return "Hello CI/CD 02 world";
-    }
 }
