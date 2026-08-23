@@ -61,4 +61,9 @@ public class CustomerController {
     public String hello2() {
         return "Hello CI/CD 02 world";
     }
+
+    @GetMapping("/hello3")
+    public String hello3() {
+        return "Hello CI/CD 02 world";
+    }
 }
