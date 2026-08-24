@@ -53,11 +53,9 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/app")
-    public String CheckMyApplication(){
-
+    @GetMapping("/deploy")
+    public String Deployed(){
         return "Welcome To my new deployed Application";
     }
-
 
 }
