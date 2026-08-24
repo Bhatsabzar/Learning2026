@@ -58,4 +58,9 @@ public class CustomerController {
         return "Welcome To my new deployed Application";
     }
 
+    @GetMapping("/spec")
+    public String Special(){
+        return "Today is my special Day";
+    }
+
 }
